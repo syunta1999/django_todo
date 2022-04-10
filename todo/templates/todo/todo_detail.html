@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{% block header %}
+<h1>ToDo </h1>
+{% endblock %}
+
+{%  block content %}
+<tr>
+    <th>タイトル：{{ task.title }}</th><br>
+    <th>詳細：{{ task.description }}</th><br>
+    <th>期限：{{ task.deadline }}</th><br>
+    <th><a href="{% url 'list' %}">戻る</a></th>
+</tr>
+{% endblock content %} 

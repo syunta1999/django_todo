@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block header %}
+<h1>ToDo 削除</h1>
+{% endblock %}
+
+{%  block content %}
+<form method="POST">
+    {% csrf_token %} 
+    <p>タイトル：{{ tasks.title }}</p>
+    <p>詳細：{{ tasks.description }}</p>
+    <p>期限：{{ tasks.deadline }}</p>
+    <input type="submit" value="削除" />
+</form>
+{% endblock content %} 
